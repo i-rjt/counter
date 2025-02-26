@@ -17,9 +17,18 @@ function counter(){
             }
         }
         display();
+        fetchQuotes();
     });
    
 }
+
+
+function fetchQuotes(){
+    let host = "http://localhost:5555/data";
+    fetch(host).then(res => res.json()).then(res => console.log(res));
+}
+
+
 
 counter();
 
